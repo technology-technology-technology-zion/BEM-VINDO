@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000; /* Cor de fundo vermelha */
+    color: #333;
+    padding: 10px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    background: #007BFF;
+    color: white;
+    padding: 0px;
+    margin-bottom: 505px;
+}
+
+
+/* Menu de navegação */
+.menu ul {
+    
+    margin-bottom: 10px;
+    list-style: none;
+    background: #ff9900;
+    padding: 5px;
+    display: flex; /* Flexbox para manter os itens na horizontal */
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+}
+
+ 
+
+.menu-list .submenu {
+    display: none; /* Esconde o submenu por padrão */
+    position: absolute; /* Mantém o submenu posicionado */
+    background: #ffc800; /* Adicione estilos para o submenu */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li:hover > .submenu {
+    display: block; /* Mostra o submenu ao passar o mouse */
+  }
+
+
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    background: #ff00c8;
+}
+
+
+/* Estilo do submenu (oculto por padrão) */
+.submenu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+ 
+
+
+
+/* Estilizando os itens dentro do submenu */
+.submenu li {
+    padding: 5px 15px;
+}
+
+/* Estilo de link dentro do submenu */
+.submenu a {
+    color: #333;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    color: #007BFF;
+}
+
+
+/* Conteúdo principal */
+.content {
+    margin: 20px 0;
+}
+
+.content section {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Design responsivo */
+@media (max-width: 768px) {
+    /* Mantém o menu na horizontal mesmo em telas pequenas */
+    .menu ul {
+        flex-wrap: nowrap; /* Garante que os itens não se quebrem em múltiplas linhas */
+    }
+
+    .menu ul li {
+        margin: 0 5px; /* Reduz a margem entre os itens em telas pequenas */
+    }
+
+    .header, .content section, .footer {
+        padding: 15px;
+    }
+}
+
+
+
+h2 {
+    color: #ffc800;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+/* Container do slider */
+
+/* Container do slider */
+/* Container do slider */
+.slider-container {
+    position: relative;
+    width: 100%; /* O slider ocupa toda a largura da tela */
+    max-width: 1000px; /* Limite máximo de largura para telas grandes */
+    margin: auto; /* Centraliza o slider */
+    overflow: hidden;
+}
+
+
+/* Contêiner dos slides */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Estilo de cada slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%; /* A imagem ocupa toda a largura do slide */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+}
+
+/* Botões de navegação */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.052);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%; /* Remove o limite de largura em telas menores */
+    }
+
+    button {
+        padding: 8px; /* Menos padding para telas menores */
+        font-size: 16px; /* Ajuste no tamanho da fonte */
+    }
+}
+
+/* Ajustes para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+.botao-comprar{
+
+
+
+
+    background-color: #2fff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    color: #ffc800;
+
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+
+/* Bloquear a seleção de texto */
+body {
+    user-select: none; /* Impede a seleção de texto */
+}
+  
